@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
         //    transform.Translate(Vector3.up * paddleSpeed * Time.deltaTime);
         //}
 
-        transform.Translate(Input.GetAxis("Horizontal") * Vector3.down * paddleSpeed * Time.deltaTime);
+        transform.Translate(Input.GetAxisRaw("Horizontal") * Vector3.down * paddleSpeed * Time.deltaTime);
 
         Vector3 pos = transform.position;
 
