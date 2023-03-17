@@ -9,4 +9,9 @@ public class ExplosiveBlock : Block
     {
         resistance = 2;
     }
+
+    public override void BounceBall(Collision collision)
+    {
+        base.BounceBall(collision);
+    }
 }

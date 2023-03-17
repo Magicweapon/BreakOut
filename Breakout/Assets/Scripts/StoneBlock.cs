@@ -9,4 +9,9 @@ public class StoneBlock : Block
     {
         resistance = 5;
     }
+
+    public override void BounceBall(Collision collision)
+    {
+        base.BounceBall(collision);
+    }
 }

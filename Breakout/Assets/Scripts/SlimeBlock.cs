@@ -9,4 +9,9 @@ public class SlimeBlock : Block
     {
         resistance = 4;
     }
+
+    public override void BounceBall(Collision collision)
+    {
+        base.BounceBall(collision);
+    }
 }

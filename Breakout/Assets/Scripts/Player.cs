@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     public int xLimit = 23;
     [SerializeField]
-    public float paddleSpeed = 20.0f;
+    public float paddleSpeed = 25.0f;
     
     //Vector3 mousePos2D;
     //Vector3 mousePos3D;
@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
         //    transform.Translate(Vector3.up * paddleSpeed * Time.deltaTime);
         //}
 
-        transform.Translate(Input.GetAxis("Horizontal") * Vector3.down * paddleSpeed * Time.deltaTime);
+        transform.Translate(Input.GetAxisRaw("Horizontal") * Vector3.down * paddleSpeed * Time.deltaTime);
 
         Vector3 pos = transform.position;
 
@@ -48,5 +48,15 @@ public class Player : MonoBehaviour
         }
 
         transform.position = pos;
+    }
+    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Ball")
+        {
+            Vector3 direction = collision.contacts[0].point - transform.position;
+            direction = direction.normalized;
+            collision.rigidbody.velocity = collision.gameObject.GetComponent<Ball>().ballSpeed * direction;
+        }
     }
 }

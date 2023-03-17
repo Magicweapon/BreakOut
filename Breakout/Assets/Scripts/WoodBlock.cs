@@ -10,8 +10,8 @@ public class WoodBlock : Block
         resistance = 3;
     }
 
-    public override void BounceBall()
+    public override void BounceBall(Collision collision)
     {
-        base.BounceBall();
+        base.BounceBall(collision);
     }
 }
