@@ -13,7 +13,7 @@ public class Ball : MonoBehaviour
     public UnityEvent OnBallDestroyed;
 
     [SerializeField]
-    public float ballSpeed = 10.0f;
+    public float ballSpeed;
     
     void Awake()
     {
@@ -24,7 +24,7 @@ public class Ball : MonoBehaviour
     {
         isGameStarted = false;
         Vector3 initPos = GameObject.FindGameObjectWithTag("Player").transform.position;
-        initPos.y += 3;
+        initPos.y += 2;
 
         transform.position = initPos;
         transform.SetParent(GameObject.FindGameObjectWithTag("Player").transform);
@@ -36,7 +36,7 @@ public class Ball : MonoBehaviour
         if (borderManagement.outDown)
         {
             OnBallDestroyed.Invoke();
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
         if (borderManagement.outUp)
         {

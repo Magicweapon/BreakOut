@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4710222609129884285}
   - component: {fileID: 4607268355651832601}
   - component: {fileID: 8452289050290550189}
+  - component: {fileID: 595823203}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -126,5 +127,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b9d747c549a76941919f19791e8ac53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xLimit: 23
+  xLimit: 24
   paddleSpeed: 25
+--- !u!114 &595823203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4702425002673173900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 030807d66751d9445a3667a0aca0be52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 4.5
+  keepOnScreen: 1
+  isOnScreen: 1
+  widthCamera: 0
+  heightCamera: 0
+  outLeft: 0
+  outRight: 0
+  outUp: 0
+  outDown: 0

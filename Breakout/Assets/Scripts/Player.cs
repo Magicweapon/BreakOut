@@ -36,18 +36,18 @@ public class Player : MonoBehaviour
 
         transform.Translate(Input.GetAxisRaw("Horizontal") * Vector3.down * paddleSpeed * Time.deltaTime);
 
-        Vector3 pos = transform.position;
+        //Vector3 pos = transform.position;
 
-        if (pos.x < -xLimit)
-        {
-            pos.x = -xLimit;
-        }
-        else if (pos.x > xLimit)
-        {
-            pos.x = xLimit;
-        }
+        //if (pos.x < -xLimit)
+        //{
+        //    pos.x = -xLimit;
+        //}
+        //else if (pos.x > xLimit)
+        //{
+        //    pos.x = xLimit;
+        //}
 
-        transform.position = pos;
+        //transform.position = pos;
     }
     
     private void OnCollisionEnter(Collision collision)
