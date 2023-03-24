@@ -8,5 +8,11 @@ public class SlimeBlock : Block
     void Start()
     {
         resistance = 4;
+        resistance = (int)((float)options.difficultyLevel + 0.4f) * resistance;
+    }
+
+    public override void BounceBall(Collision collision)
+    {
+        base.BounceBall(collision);
     }
 }

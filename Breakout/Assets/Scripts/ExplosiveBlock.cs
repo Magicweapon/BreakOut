@@ -8,5 +8,11 @@ public class ExplosiveBlock : Block
     void Start()
     {
         resistance = 2;
+        resistance = (int)((float)options.difficultyLevel + 0.4f) * resistance;
+    }
+
+    public override void BounceBall(Collision collision)
+    {
+        base.BounceBall(collision);
     }
 }
