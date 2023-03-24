@@ -1150,7 +1150,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Reset highscore
+  m_Text: Reset highscores
 --- !u!222 &819941805
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1266,8 +1266,8 @@ RectTransform:
   m_Father: {fileID: 256877320}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.0052941125, y: 0}
-  m_AnchorMax: {x: 0.0052941125, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2281,7 +2281,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.0052941125, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2879,6 +2879,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1734864094}
   m_CullTransparentMesh: 1
+--- !u!1 &1795642517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1795642519}
+  - component: {fileID: 1795642518}
+  m_Layer: 0
+  m_Name: Persistence Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1795642518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795642517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b438ea1a212be21488ef57e7c734eddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToSave:
+  - {fileID: 11400000, guid: f85aa27ff9fb1f648b06a78cd97bea84, type: 2}
+  - {fileID: 11400000, guid: 04d70ca9a1ea41a4698897138c8a298b, type: 2}
+  - {fileID: 11400000, guid: a16e564490e77dd40900d4f5e40481e9, type: 2}
+  - {fileID: 11400000, guid: b5dc236c8521e7b4b86ed592be739fbd, type: 2}
+--- !u!4 &1795642519
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795642517}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.7905788, y: -3.8687558, z: -0.85582733}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1806681836
 GameObject:
   m_ObjectHideFlags: 0
@@ -2891,8 +2939,9 @@ GameObject:
   - component: {fileID: 1806681840}
   - component: {fileID: 1806681839}
   - component: {fileID: 1806681838}
+  - component: {fileID: 1806681841}
   m_Layer: 5
-  m_Name: Reset highscore
+  m_Name: Reset highscores
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2961,7 +3010,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1806681839}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1806681839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3000,6 +3061,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806681836}
   m_CullTransparentMesh: 1
+--- !u!114 &1806681841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806681836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 505b7e3700f72e042adf6f49227bdd6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  options: {fileID: 11400000, guid: f85aa27ff9fb1f648b06a78cd97bea84, type: 2}
 --- !u!1 &1875054748
 GameObject:
   m_ObjectHideFlags: 0
@@ -3097,10 +3171,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1434838530}
   m_HandleRect: {fileID: 925216049}
   m_Direction: 0
-  m_MinValue: 3
-  m_MaxValue: 20
+  m_MinValue: 10
+  m_MaxValue: 35
   m_WholeNumbers: 0
-  m_Value: 3.09
+  m_Value: 22.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

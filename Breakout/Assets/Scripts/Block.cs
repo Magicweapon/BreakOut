@@ -7,11 +7,12 @@ public class Block : MonoBehaviour
 {
     public int resistance = 1;
     public UnityEvent IncreaseScore;
+    public Options options;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        resistance = (int)((float)options.difficultyLevel + 0.4f) * resistance;
     }
 
     // Update is called once per frame

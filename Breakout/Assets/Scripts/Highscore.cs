@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Highscore", menuName = "Tools/Highscore", order = 0)]
 public class Highscore : PersistentClass
 {
-    public int highscore = 1000;
+    public int highscore = 0;
 }

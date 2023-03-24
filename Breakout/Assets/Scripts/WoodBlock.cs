@@ -7,7 +7,8 @@ public class WoodBlock : Block
     // Start is called before the first frame update
     void Start()
     {
-        resistance = 3;
+        resistance = 2;
+        resistance = (int)((float)options.difficultyLevel + 0.4f) * resistance;
     }
 
     public override void BounceBall(Collision collision)

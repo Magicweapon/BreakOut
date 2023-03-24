@@ -7,6 +7,7 @@ public class Options : PersistentClass
 {
     public float ballSpeed;
     public difficulty difficultyLevel = difficulty.facil;
+    public List<Highscore> Highscores;
 
     public enum difficulty
     {
@@ -23,5 +24,13 @@ public class Options : PersistentClass
     public void ChangeDifficulty(int newDifficulty)
     {
         difficultyLevel = (difficulty)newDifficulty;
+    }
+
+    public void ResetHighscores()
+    {
+        foreach (Highscore hs in Highscores)
+        {
+            hs.highscore = 0;
+        }
     }
 }

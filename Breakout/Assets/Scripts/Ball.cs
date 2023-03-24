@@ -11,6 +11,7 @@ public class Ball : MonoBehaviour
     private new Rigidbody rigidbody;
     private BorderManagement borderManagement;
     public UnityEvent OnBallDestroyed;
+    public Options options;
 
     [SerializeField]
     public float ballSpeed;
@@ -18,6 +19,7 @@ public class Ball : MonoBehaviour
     void Awake()
     {
         borderManagement = GetComponent<BorderManagement>();
+        ballSpeed = options.ballSpeed;
     }
 
     void Start()
