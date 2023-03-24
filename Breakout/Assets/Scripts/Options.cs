@@ -6,7 +6,7 @@ using UnityEngine;
 public class Options : PersistentClass
 {
     public float ballSpeed;
-    public difficulty difficultyLevel = difficulty.facil;
+    public difficulty difficultyLevel;
     public List<Highscore> Highscores;
 
     public enum difficulty

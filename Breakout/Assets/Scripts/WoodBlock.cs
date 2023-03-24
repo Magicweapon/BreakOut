@@ -8,7 +8,7 @@ public class WoodBlock : Block
     void Start()
     {
         resistance = 2;
-        resistance = (int)((float)options.difficultyLevel + 0.4f) * resistance;
+        resistance = (int)(options.difficultyLevel + 1) * resistance;
     }
 
     public override void BounceBall(Collision collision)
