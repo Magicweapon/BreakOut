@@ -29,7 +29,7 @@ public class PersistentClass : ScriptableObject
 
 	public string GetPath(string fileName = null)
 	{
-		var fileFullName = string.IsNullOrEmpty(fileName) ? "Hola" : fileName;
+		var fileFullName = string.IsNullOrEmpty(fileName) ? "Persistent Class" : fileName;
 		return string.Format("{0}/{1}.fex", Application.persistentDataPath, fileFullName);
 	}
 }

@@ -12,7 +12,7 @@ public class Block : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        resistance = (int)((float)options.difficultyLevel + 0.4f) * resistance;
+        resistance = (int)(options.difficultyLevel + 1) * resistance;
     }
 
     // Update is called once per frame

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Options
   m_EditorClassIdentifier: 
   ballSpeed: 22.5
-  difficultyLevel: 1
+  difficultyLevel: 0
   Highscores:
   - {fileID: 11400000, guid: 04d70ca9a1ea41a4698897138c8a298b, type: 2}
   - {fileID: 11400000, guid: a16e564490e77dd40900d4f5e40481e9, type: 2}
